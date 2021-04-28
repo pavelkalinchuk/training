@@ -1,4 +1,4 @@
- -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 from selenium import webdriver
 # from selenium.webwd.common.keys import Keys
 # from selenium.webwd.support.ui import Select
@@ -10,11 +10,11 @@ import pytest
 
 class Test(unittest.TestCase):
     def setUp(self):
-        self.wd = webwd.Chrome(executable_path='/Users/pavelkalincuk/git/help_soft/chromedriver')
+        self.wd = webdriver.Chrome(executable_path='/Users/pavelkalincuk/git/help_soft/chromedriver')
         self.wd.implicitly_wait(30)
 
     def test_(self):
-        driver = self.wd
+        wd = self.wd
         wd.get("http://localhost/addressbook/index.php")
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys("admin")
